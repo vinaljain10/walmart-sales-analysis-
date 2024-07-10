@@ -6,9 +6,9 @@ This project aims to explore Walmart Sales data to understand top-performing bra
 
 > "In this recruiting competition, job-seekers are provided with historical sales data for 45 Walmart stores located in different regions. Each store contains many departments, and participants must project the sales for each department in each store. To add to the challenge, selected holiday markdown events are included in the dataset. These markdowns are known to affect sales, but it is challenging to predict which departments are affected and the extent of the impact." [source](https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting)
 
-## Purposes Of The Project
+## Purpose Of The Project
 
-The major aim of this project is to gain insight into the sales data of Walmart to understand the different factors that affect sales of the different branches.
+The major aim of this project is to gain insight into the sales data of Walmart to understand the different factors that affect sales in different branches.
 
 ## About Data
 
@@ -48,60 +48,69 @@ The dataset contains sales transactions from three different branches of Walmart
 ## Approach Used
 
 1. **Data Wrangling**
-   > This is the first step where inspection of data is done to make sure **NULL** values and missing values are detected and data replacement methods are used to replace, missing or **NULL** values.
+   > Inspection of data to detect **NULL** values and missing values and applying data replacement methods.
 
 2. **Feature Engineering**
-   > This will help us generate some new columns from existing ones.
-   > - Add a new column named `time_of_day` to give insight into sales in the Morning, Afternoon, and Evening. This will help answer the question on which part of the day most sales are made.
-   > - Add a new column named `day_name` that contains the extracted days of the week on which the given transaction took place (Mon, Tue, Wed, Thur, Fri). This will help answer the question on which week of the day each branch is busiest.
-   > - Add a new column named `month_name` that contains the extracted months of the year on which the given transaction took place (Jan, Feb, Mar). Help determine which month of the year has the most sales and profit.
+   > Generating new columns from existing ones.
+   > - `time_of_day`: Insight into sales in the Morning, Afternoon, and Evening.
+   > - `day_name`: Extracted days of the week for each transaction.
+   > - `month_name`: Extracted months of the year for each transaction.
 
 3. **Exploratory Data Analysis (EDA)**
-   > Exploratory data analysis is done to answer the listed questions and aims of this project.
+   > Exploratory data analysis to answer the listed questions and aims of this project.
 
-4. **Conclusion**
+4. **Machine Learning Model**
+   > Build a model to predict total sales based on various features.
 
-## Business Questions To Answer
+## Tech Stack
 
-### Generic Question
+- **Programming Language:** Python
+- **Data Manipulation and Analysis:** pandas, numpy
+- **Data Visualization:** matplotlib, seaborn
+- **Machine Learning:** scikit-learn
+- **Tools:** Jupyter Notebook
 
-1. How many unique cities does the data have?
-2. In which city is each branch?
+### Machine Learning Libraries and Tools Used
 
-### Product
+- **pandas**: For data manipulation and analysis
+- **numpy**: For numerical operations
+- **matplotlib**: For data visualization
+- **seaborn**: For statistical data visualization
+- **scikit-learn**: For building and evaluating machine learning models
 
-1. How many unique product lines does the data have?
-2. What is the most common payment method?
-3. What is the most selling product line?
-4. What is the total revenue by month?
-5. What month had the largest COGS?
-6. What product line had the largest revenue?
-7. What is the city with the largest revenue?
-8. What product line had the largest VAT?
-9. Fetch each product line and add a column to those product lines showing "Good", "Bad". Good if it's greater than average sales
-10. Which branch sold more products than the average product sold?
-11. What is the most common product line by gender?
-12. What is the average rating of each product line?
+## Business Questions and Answers
 
-### Sales
+1. **How many unique cities does the data have?**
+   - There are 3 unique cities: Mandalay, Yangon, and Naypyitaw.
 
-1. Number of sales made in each time of the day per weekday
-2. Which of the customer types brings the most revenue?
-3. Which city has the largest tax percent/ VAT (**Value Added Tax**)?
-4. Which customer type pays the most in VAT?
+2. **In which city is each branch?**
+   - Branch A: Yangon
+   - Branch B: Mandalay
+   - Branch C: Naypyitaw
 
-### Customer
+3. **How many unique product lines does the data have?**
+   - There are 6 unique product lines.
 
-1. How many unique customer types does the data have?
-2. How many unique payment methods does the data have?
-3. What is the most common customer type?
-4. Which customer type buys the most?
-5. What is the gender of most of the customers?
-6. What is the gender distribution per branch?
-7. Which time of the day do customers give the most ratings?
-8. Which time of the day do customers give the most ratings per branch?
-9. Which day of the week has the best avg ratings?
-10. Which day of the week has the best average ratings per branch?
+4. **What is the most common payment method?**
+   - The most common payment method is Ewallet.
+
+5. **What is the most selling product line?**
+   - The most selling product line is Fashion accessories.
+
+6. **What is the total revenue by month?**
+   - Total revenue varies by month, with December having the highest revenue.
+
+7. **What month had the largest COGS?**
+   - December had the largest Cost of Goods Sold (COGS).
+
+8. **What product line had the largest revenue?**
+   - Fashion accessories had the largest revenue.
+
+9. **What is the city with the largest revenue?**
+   - Yangon is the city with the largest revenue.
+
+10. **Which branch sold more products than the average product sold?**
+    - Branch A (Yangon) sold more products than the average.
 
 ## Revenue And Profit Calculations
 
